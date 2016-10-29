@@ -1,9 +1,11 @@
-#ifndef DAGAL_TEXTVIEW_H
+﻿#ifndef DAGAL_TEXTVIEW_H
 #define DAGAL_TEXTVIEW_H
+
+#include "View.h"
 
 namespace Dagal {
 
-	class TextView : public Dagal::View
+	class TextView : public View
 	{
 	public:
 		TextView();

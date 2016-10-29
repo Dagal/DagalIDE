@@ -1,9 +1,11 @@
-#ifndef DAGAL_VIEW_H
+﻿#ifndef DAGAL_VIEW_H
 #define DAGAL_VIEW_H
+
+#include "Object.h"
 
 namespace Dagal {
 
-	class View : public Dagal::Object
+	class View : public Object
 	{
 	public:
 		View();

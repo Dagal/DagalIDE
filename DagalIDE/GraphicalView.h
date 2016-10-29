@@ -1,9 +1,11 @@
-#ifndef DAGAL_GRAPHICALVIEW_H
+﻿#ifndef DAGAL_GRAPHICALVIEW_H
 #define DAGAL_GRAPHICALVIEW_H
+
+#include "View.h"
 
 namespace Dagal {
 
-	class GraphicalView : public Dagal::View
+	class GraphicalView : public View
 	{
 	public:
 		GraphicalView();
