@@ -1,9 +1,11 @@
-#ifndef DAGAL_CODEFILE_H
+﻿#ifndef DAGAL_CODEFILE_H
 #define DAGAL_CODEFILE_H
+
+#include "TextFile.h"
 
 namespace Dagal {
 
-	class CodeFile : public Dagal::TextFile
+	class CodeFile : public TextFile
 	{
 	public:
 		CodeFile();

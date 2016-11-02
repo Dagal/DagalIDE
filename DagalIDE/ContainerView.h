@@ -1,5 +1,7 @@
-#ifndef DAGAL_CONTAINERVIEW_H
+﻿#ifndef DAGAL_CONTAINERVIEW_H
 #define DAGAL_CONTAINERVIEW_H
+
+#include "View.h"
 
 namespace Dagal {
 

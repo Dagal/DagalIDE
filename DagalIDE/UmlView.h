@@ -1,9 +1,11 @@
-#ifndef DAGAL_UMLVIEW_H
+﻿#ifndef DAGAL_UMLVIEW_H
 #define DAGAL_UMLVIEW_H
+
+#include "GraphicalView.h"
 
 namespace Dagal {
 
-	class UmlView : public Dagal::GraphicalView
+	class UmlView : public GraphicalView
 	{
 	public:
 		UmlView();
