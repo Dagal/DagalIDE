@@ -17,6 +17,12 @@
   <VirtualDirectory Name="CMake">
     <File Name="CMakeLists.txt"/>
   </VirtualDirectory>
+  <VirtualDirectory Name="DocFiles">
+    <File Name="AUTHORS"/>
+    <File Name="ChangeLog"/>
+    <File Name="NEWS"/>
+    <File Name="README"/>
+  </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
       <Compiler Options="" C_Options="" Assembler="">
@@ -109,10 +115,4 @@
       </Completion>
     </Configuration>
   </Settings>
-  <VirtualDirectory Name="DocFiles">
-    <File Name="AUTHORS"/>
-    <File Name="ChangeLog"/>
-    <File Name="NEWS"/>
-    <File Name="README"/>
-  </VirtualDirectory>
 </CodeLite_Project>
