@@ -9,10 +9,16 @@
   <Dependencies/>
   <VirtualDirectory Name="include">
     <File Name="include/MainWindow.h"/>
+    <File Name="src/ProjectWindow.h"/>
+    <File Name="src/EditorWindow.h"/>
+    <File Name="src/UmlWindow.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="src">
     <File Name="src/main.cpp"/>
     <File Name="src/MainWindow.cpp"/>
+    <File Name="src/ProjectWindow.cpp"/>
+    <File Name="src/EditorWindow.cpp"/>
+    <File Name="src/UmlWindow.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="CMake">
     <File Name="CMakeLists.txt"/>
