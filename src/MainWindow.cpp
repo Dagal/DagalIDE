@@ -1,4 +1,4 @@
-#include <MainWindow.h>
+#include "MainWindow.h"
 #include <iostream>
 
 #include <gtkmm/main.h>
@@ -8,7 +8,7 @@
 #include <gtkmm/stock.h>
 
 MainWindow::MainWindow() :
-	Gtk::Window(),
+	Gtk::ApplicationWindow(),
 	mMainBox(),
 	mMainHeader(),
 	mMainMenu(),

@@ -7,18 +7,9 @@
   </Plugins>
   <Description/>
   <Dependencies/>
-  <VirtualDirectory Name="include">
-    <File Name="include/MainWindow.h"/>
-    <File Name="src/ProjectWindow.h"/>
-    <File Name="src/EditorWindow.h"/>
-    <File Name="src/UmlWindow.h"/>
-  </VirtualDirectory>
+  <VirtualDirectory Name="include"/>
   <VirtualDirectory Name="src">
     <File Name="src/main.cpp"/>
-    <File Name="src/MainWindow.cpp"/>
-    <File Name="src/ProjectWindow.cpp"/>
-    <File Name="src/EditorWindow.cpp"/>
-    <File Name="src/UmlWindow.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="CMake">
     <File Name="CMakeLists.txt"/>
@@ -28,6 +19,9 @@
     <File Name="ChangeLog"/>
     <File Name="NEWS"/>
     <File Name="README"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="UserInterface">
+    <File Name="UserInterface/DagalIDE.glade"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
@@ -57,7 +51,10 @@
         <StartupCommands/>
       </Debugger>
       <PreBuild/>
-      <PostBuild/>
+      <PostBuild>
+        <Command Enabled="no">#Place un lien vers le fichier DagalIDE.glade dans le répertoire de debug</Command>
+        <Command Enabled="yes">ln -s ./Debug/DagalIDE.glade DagalIDE.glade</Command>
+      </PostBuild>
       <CustomBuild Enabled="no">
         <RebuildCommand/>
         <CleanCommand/>

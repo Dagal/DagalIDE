@@ -52,11 +52,7 @@ set(CMAKE_LDFLAGS "${CMAKE_LDFLAGS} -L. ")
 
 # Define the CXX sources
 set ( CXX_SRCS
-    ${CMAKE_SOURCE_DIR}/DagalIDE/src/MainToolBar.cpp
-    ${CMAKE_SOURCE_DIR}/DagalIDE/src/MainMenu.cpp
-    ${CMAKE_SOURCE_DIR}/DagalIDE/src/MainStatusBar.cpp
     ${CMAKE_SOURCE_DIR}/DagalIDE/src/main.cpp
-    ${CMAKE_SOURCE_DIR}/DagalIDE/src/MainWindow.cpp
 )
 
 set_source_files_properties(

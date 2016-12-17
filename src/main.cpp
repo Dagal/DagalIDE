@@ -1,12 +1,57 @@
-#include <MainWindow.h>
-#include <gtkmm/application.h>
+#include <gtkmm.h>
+#include <iostream>
 
-int main (int argc, char *argv[])
+Gtk::ApplicationWindow* pAW = nullptr;
+
+static
+void on_quit()
 {
-  Glib::RefPtr<Gtk::Application> app = Gtk::Application::create(argc, argv, "org.gtkmm.example");
+  if(pAW)
+    pAW->hide(); //hide() will cause main::run() to end.
+}
 
-  MainWindow mainwindow;
+int main (int argc, char **argv)
+{
+  auto app = Gtk::Application::create(argc, argv, "nf.co.dagal.dagalide");
 
-  //Shows the window and returns when it is closed.
-  return app->run(mainwindow);
+  //Load the GtkBuilder file and instantiate its widgets:
+  auto refBuilder = Gtk::Builder::create();
+  try
+  {
+    refBuilder->add_from_file("UserInterface/DagalIDE.glade");
+  }
+  catch(const Glib::FileError& ex)
+  {
+    std::cerr << "FileError: " << ex.what() << std::endl;
+    return 1;
+  }
+  catch(const Glib::MarkupError& ex)
+  {
+    std::cerr << "MarkupError: " << ex.what() << std::endl;
+    return 2;
+  }
+  catch(const Gtk::BuilderError& ex)
+  {
+    std::cerr << "BuilderError: " << ex.what() << std::endl;
+    return 3;
+  }
+
+  //Get the GtkBuilder-instantiated Dialog:
+  refBuilder->get_widget("MainWindow", pAW);
+  if(pAW)
+  {
+    //Get the GtkBuilder-instantiated Button, and connect a signal handler:
+    Gtk::MenuItem* pQPMI = nullptr;
+    refBuilder->get_widget("QuitProjectMenuItem", pQPMI);
+    if(pQPMI)
+    {
+      pQPMI->signal_activate().connect( sigc::ptr_fun(on_quit) );
+    }
+
+    app->run(*pAW);
+  }
+
+  delete pAW;
+
+  return 0;
 }
